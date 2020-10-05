@@ -8,3 +8,5 @@ The robot is based off of the Drogerdy 2.0 and has been redesigned to allow the 
 The entire system is powered by a 20v De Walt battery pack. This was the cheapest way I could find to power everything since I already have quite a few of these batteries. I have several voltage converters on board since my system uses 4 different voltages (5v for the raspberry pi, 12v for the drive system, 3.3v for the LED lights, and 24v for the steppers to control the robotic arm).
 
 All of the code is written in python 3 and while some of it initially was borrowed from forums and such, almost all of it is heavily modified, or rewritten altogether. 
+
+This is a video of the robot driving around. https://www.youtube.com/watch?v=tW3RMN0b7YU
