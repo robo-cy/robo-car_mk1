@@ -7,6 +7,13 @@ from gpiozero import * # All the gpiozero modules allow us to control the
 from gpiozero import PWMOutputDevice, DigitalOutputDevice, LED, DistanceSensor
 from time import sleep # Allows us to tell our python program to pause for a specified time
 import curses # Allows us to capture keypresses
+import os
+
+stream = "python3 cam_stream.py &"
+stream_display = "firefox http://192.168.120.42:8000"
+os.system(stream)
+sleep(0.5)
+os.system(stream_display)
 
 warnings.simplefilter('ignore') # Ignore warnings
 
