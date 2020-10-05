@@ -57,15 +57,10 @@ def rampup(n):
         round(powerlevel, 1)
         if powerlevel < 0:
             powerlevel = 0
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
         elif powerlevel > 1:
             powerlevel = 1
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
-        else:
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
+        driveRight.value = powerlevel
+        driveLeft.value = powerlevel
         sleep(0.05)
 
 # This function lets us ease the power off or down
@@ -76,15 +71,10 @@ def rampdown(n):
         round(powerlevel, 1)
         if powerlevel < 0:
             powerlevel = 0
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
         elif powerlevel > 1:
             powerlevel = 1
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
-        else:
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
+        driveRight.value = powerlevel
+        driveLeft.value = powerlevel
         sleep(0.05)
 
 
