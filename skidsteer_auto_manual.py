@@ -7,6 +7,10 @@ from gpiozero import * # All the gpiozero modules allow us to control the
 from gpiozero import PWMOutputDevice, DigitalOutputDevice, LED, DistanceSensor
 from time import sleep # Allows us to tell our python program to pause for a specified time
 import curses # Allows us to capture keypresses
+import os
+
+stream = "python3 cam_stream.py &"
+os.system(stream)
 
 warnings.simplefilter('ignore') # Ignore warnings
 
@@ -57,15 +61,10 @@ def rampup(n):
         round(powerlevel, 1)
         if powerlevel < 0:
             powerlevel = 0
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
         elif powerlevel > 1:
             powerlevel = 1
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
-        else:
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
+        driveRight.value = powerlevel
+        driveLeft.value = powerlevel
         sleep(0.05)
 
 # This function lets us ease the power off or down
@@ -76,15 +75,10 @@ def rampdown(n):
         round(powerlevel, 1)
         if powerlevel < 0:
             powerlevel = 0
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
         elif powerlevel > 1:
             powerlevel = 1
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
-        else:
-            driveRight.value = powerlevel
-            driveLeft.value = powerlevel
+        driveRight.value = powerlevel
+        driveLeft.value = powerlevel
         sleep(0.05)
 
 
