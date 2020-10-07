@@ -10,10 +10,7 @@ import curses # Allows us to capture keypresses
 import os
 
 stream = "python3 cam_stream.py &"
-stream_display = "firefox http://192.168.120.42:8000"
 os.system(stream)
-sleep(0.5)
-os.system(stream_display)
 
 warnings.simplefilter('ignore') # Ignore warnings
 
